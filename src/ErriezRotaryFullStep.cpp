@@ -30,7 +30,13 @@
  *      Documentation:  https://erriez.github.io/ErriezRotaryEncoderFullStep
  */
 
-#if (defined(__AVR__) || defined(ARDUINO_ARCH_SAM))
+//#if (defined(__AVR__) || defined(ARDUINO_ARCH_SAM))
+//#include <avr/pgmspace.h>
+//#else
+//#include <pgmspace.h>
+//#endif
+
+#if ((defined(__AVR__) || defined(ARDUINO_ARCH_SAMD)) or (__SAM3X8E__) || defined(__STM32F1__))  // ATSAMD21 and STM32F1 support
 #include <avr/pgmspace.h>
 #else
 #include <pgmspace.h>
