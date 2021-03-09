@@ -23,26 +23,29 @@
  */
 
 /*!
- * \file ErriezRotaryFullStep.cpp
+ * \file TML_ErriezRotaryFullStep.cpp
  * \brief Three speed full step Rotary Encoder library for Arduino.
  * \details
  *      Source:         https://github.com/Erriez/ErriezRotaryEncoderFullStep
  *      Documentation:  https://erriez.github.io/ErriezRotaryEncoderFullStep
  */
 
-//#if (defined(__AVR__) || defined(ARDUINO_ARCH_SAM))
-//#include <avr/pgmspace.h>
-//#else
-//#include <pgmspace.h>
-//#endif
-
-#if ((defined(__AVR__) || defined(ARDUINO_ARCH_SAMD)) or (__SAM3X8E__) || defined(__STM32F1__))  // ATSAMD21 and STM32F1 support
+#if ((defined(__AVR__) || defined(ARDUINO_ARCH_SAMD)) or (__SAM3X8E__) || defined(__STM32F1__))
 #include <avr/pgmspace.h>
 #else
 #include <pgmspace.h>
 #endif
 
-#include "ErriezRotaryFullStep.h"
+//#if (defined(__SAM3X8E__) || defined(__STM32F1__))
+//#include <avr/pgmspace.h>
+//#else
+//#include <pgmspace.h>
+//#endif
+
+
+
+
+#include "TML_ErriezRotaryFullStep.h"
 
 #define DIR_NONE  0x00      //!< No complete step yet
 #define DIR_CW    0x10      //!< Clockwise step

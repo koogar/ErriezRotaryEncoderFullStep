@@ -27,7 +27,8 @@
  * Documentation:  https://erriez.github.io/ErriezRotaryEncoderFullStep
  */
 
-#include <ErriezRotaryFullStep.h>
+
+#include <TML_ErriezRotaryFullStep.h>
 
 // Connect rotary pins to the DIGITAL or ANALOG pins of the Arduino board
 // Use A0..A7 when using analog pins

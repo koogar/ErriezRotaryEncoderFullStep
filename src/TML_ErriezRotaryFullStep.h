@@ -23,7 +23,7 @@
  */
 
 /*!
- * \file ErriezRotaryFullStep.h
+ * \file TML_ErriezRotaryFullStep.h
  * \brief Three speed full step Rotary Encoder library for Arduino
  * \details
  *      Source:         https://github.com/Erriez/ErriezRotaryEncoderFullStep

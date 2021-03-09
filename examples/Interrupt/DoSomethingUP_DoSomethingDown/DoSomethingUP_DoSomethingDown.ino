@@ -20,7 +20,7 @@
 // +-----------------------------------+--------------------------------+
 //
 
-#include <ErriezRotaryFullStep.h>
+#include <TML_ErriezRotaryFullStep.h>
 
 #define ROTARY_A   4
 #define ROTARY_B   3
