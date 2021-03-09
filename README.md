@@ -37,6 +37,8 @@ Tested with Arduino IDE v1.8.5 on hardware:
 * Arduino Mega or Mega2560
 * Arduino Leonardo
 * WeMos D1 R2 & mini (ESP8266)
+* STM32F1 BluePill
+* ATSAMD21
 
 
 ### Interrupts
@@ -144,13 +146,16 @@ void loop()
 
 // Connect rotary pins to Arduino DIGITAL pins with interrupt support:
 //
-// +-----------------------------------+--------------------------+
-// |              Board                |  DIGITAL interrupt pins  |
-// +-----------------------------------+--------------------------+
-// | Uno, Nano, Mini, other 328-based  |  2, 3                    |
-// | Mega, Mega2560, MegaADK           |  2, 3, 18, 19, 20, 21    |
-// | Micro, Leonardo, other 32u4-based |  0, 1, 2, 3, 7           |
-// +-----------------------------------+--------------------------+
+// +-----------------------------------+--------------------------------+
+// |              Board                |    DIGITAL interrupt pins      |
+// +-----------------------------------+--------------------------------+
+// | Uno, Nano, Mini, other 328-based  | 2, 3                           |
+// | Mega, Mega2560, MegaADK           | 2, 3, 18, 19, 20, 21           |
+// | Micro, Leonardo, other 32u4-based | 0, 1, 2, 3, 7                  |
+// | WeMos D1 R2 & mini (ESP8266)      | 12 = D6; 13 = D7; 14 = D5      |
+// | Zero, ATSAMD21                    | all digital pins, except pin 4 |
+// | STM32F103 (BluePill)              | all digital pins,              |
+// +-----------------------------------+--------------------------------+
 //
 #define ROTARY_PIN1   2
 #define ROTARY_PIN2   3
