@@ -22,9 +22,9 @@
 
 #include <TML_ErriezRotaryFullStep.h>
 
-#define ROTARY_A   4
-#define ROTARY_B   3
-#define ROTARY_BUTTON_PIN   2
+#define ROTARY_A   3
+#define ROTARY_B   2
+#define ROTARY_BUTTON_PIN   1
 
 RotaryFullStep rotary(ROTARY_A, ROTARY_B);
 
