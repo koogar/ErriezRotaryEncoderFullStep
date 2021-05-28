@@ -30,11 +30,11 @@
  *      Documentation:  https://erriez.github.io/ErriezRotaryEncoderFullStep
  */
 
-#if ((defined(__AVR__) || defined(ARDUINO_ARCH_SAMD)) or (__SAM3X8E__) || defined(__STM32F1__))
-#include <avr/pgmspace.h>
-#else
-#include <pgmspace.h>
-#endif
+//#if ((defined(__AVR__) || defined(ARDUINO_ARCH_SAMD)) or (__SAM3X8E__) || defined(__STM32F1__))
+//#include <avr/pgmspace.h>
+//#else
+//#include <pgmspace.h>
+//#endif
 
 //#if (defined(__SAM3X8E__) || defined(__STM32F1__))
 //#include <avr/pgmspace.h>
@@ -42,7 +42,11 @@
 //#include <pgmspace.h>
 //#endif
 
-
+#if (defined(__AVR__) || defined(ARDUINO_ARCH_SAM) || defined(ARDUINO_ARCH_SAMD) || defined(ARDUINO_ARCH_STM32F1))
+#include <avr/pgmspace.h>
+#else
+#include <pgmspace.h>
+#endif
 
 
 #include "TML_ErriezRotaryFullStep.h"
